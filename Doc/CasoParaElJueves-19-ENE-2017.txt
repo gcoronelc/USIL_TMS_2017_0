@@ -1,0 +1,10 @@
+Caso para el Jueves
+==================================
+
+- Caso de Uso
+- Documentación del caso de uso
+- Diagrama de Secuencia
+- Diagrama de Clase
+- Diagrama de Componentes
+- Proyecto Java
+
