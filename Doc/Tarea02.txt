@@ -1,0 +1,33 @@
+Tema: Arquitectura de Software
+ - Arquitectura de Capas
+ - Arquitectura Cebolla
+ - Arquitecturas Limpias
+ - Arquitectura Hexagonal
+
+Fecha: 24-ENE-2017
+
+Grupo 1: Arquitectura de Capas
+ - ANCASI VILCA, ALICIA JHANET
+ - CARPIO VILLALOBOS, GLADYS HILLARY
+
+Grupo 2: Arquitectura Cebolla
+ - RENGIFO PACAYA, CARLOS ELISEO
+ - ANCHAPURI CHOQUEGONZA, ROXANA
+
+Grupo 3: Arquitecturas Limpias
+ - VALLEJOS CONTRERAS, MARCO ANTONIO
+ - HILARIO GAMARRA, SUSAN ARACELI
+
+Grupo 4: Arquitectura Hexagonal
+ - SANCHEZ YALAN, MARIA DE LOS ANGELES
+ - VENTURA RIVERA, ALINA PATRICIA
+
+Grupo 5: Arquitectura de Capas
+ - ARCOS ESPINO, JAIR FELIPE
+ - RIME APARICIO, DINA FRANCY
+
+Grupo 6: Arquitectura Hexagonal
+ - ALARCON LEDESMA, MICHAEL PAUL
+ - JEMPEKIT PUJUPAT, ROBER
+ - REATEGUI MALDONADO, JEAN PAUL
+ 
