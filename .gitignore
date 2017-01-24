@@ -5,3 +5,12 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/SolPractica01/PromedioLib/nbproject/private/
+/SolPractica01/PromedioService/nbproject/private/
+/SolPractica01/Promedio/nbproject/private/
+/SolPractica01/Promedio/build/
+/SolPractica01/Promedio/dist/
+/SolPractica01/PromedioApp/nbproject/private/
+/SolPractica01/PromedioApp/build/
+/SolPractica01/PromedioWeb/nbproject/private/
+/SolPractica01/PromedioWeb/build/
