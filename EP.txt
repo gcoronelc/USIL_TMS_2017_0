@@ -1,0 +1,6 @@
+Examen Parcial
+- Caso de Uso
+- Documentacion del caso de uso
+- Diseño - Abstracción
+- Diagrama de secuancia
+- Implementación
