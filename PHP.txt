@@ -1,0 +1,16 @@
+Frameworks:
+  - Slim - Framework de micro servicios REST
+  - Angular JS - Framework de JS de Google
+  - Angular2 - Framework de JS de Google
+  - JQuery - Librería de JS
+  - JQuery UI - Plugig para JQuery de componentes usuario
+  - JSON - Representaciòn de datos mas lijero que XML
+  - XML - Representacion de datos en formato de etiquetas.
+  - AJAX - LLamadas asincronas al servidor
+  - BootStrap - Framework de CSS de twitter
+  - Symfony - Framework para PHP
+  - Normalize - Librería cd CSS
+  - PHP Composer - Resulve dependencias en PHP, similar a maven en Java
+
+
+
