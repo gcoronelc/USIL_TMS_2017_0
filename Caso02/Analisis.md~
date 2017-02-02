@@ -684,10 +684,10 @@
 			    (1438, 576)
 			    (2130, 508))
 			line_style 	0)))
-	    (object InteractionDiagram "DiagramaSequencia"
+	    (object InteractionDiagram "DS_InicioSesion"
 		mechanism_ref 	@14
 		quid       	"589341BC0179"
-		title      	"DiagramaSequencia"
+		title      	"DS_InicioSesion"
 		zoom       	100
 		max_height 	28350
 		max_width  	21600
