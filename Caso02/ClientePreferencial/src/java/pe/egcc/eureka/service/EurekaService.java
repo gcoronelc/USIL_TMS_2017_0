@@ -3,6 +3,8 @@ package pe.egcc.eureka.service;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.List;
+import java.util.Map;
 import pe.egcc.eureka.db.AccesoDB;
 import pe.egcc.eureka.model.Empleado;
 
@@ -55,5 +57,16 @@ public class EurekaService {
     }
     return bean;
   }
+  
+  public Map<String,Object> consultaCuenta(String cuenta){
+    
+    return null;
+  }
 
+  public List<Map<String,Object>> consultaMovimientos(String cuenta){
+    
+    return null;
+  }
+  
+  
 }
