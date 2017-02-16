@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import pe.egcc.eureka.db.AccesoDB;
 import pe.egcc.eureka.model.Empleado;
+import pe.egcc.eureka.util.JdbcUtil;
 
 /**
  *
@@ -59,13 +60,63 @@ public class EurekaService {
   }
   
   public Map<String,Object> consultaCuenta(String cuenta){
-    
-    return null;
+    Connection cn = null;
+    Map<String,Object> rec = null;
+    try {
+      cn = AccesoDB.getConnection();
+      String sql = "select sucucodigo, sucunombre, cliecodigo,"
+              + "cliepaterno, cliematerno, clienombre,"
+              + "cuencodigo, cuensaldo, cuenestado,"
+              + "monecodigo, monenombre "
+              + "from v_cuenta "
+              + "where cuencodigo = ?";
+      PreparedStatement pstm = cn.prepareStatement(sql);
+      pstm.setString(1, cuenta);
+      ResultSet rs = pstm.executeQuery();
+      if(rs.next()){
+        rec = JdbcUtil.rowToMap(rs);
+      }
+      rs.close();
+      pstm.close();
+    } catch (Exception e) {
+      throw new RuntimeException(e.getMessage());
+    } finally {
+      try {
+        cn.close();
+      } catch (Exception e) {
+      }
+    }
+    return rec;
   }
 
-  public List<Map<String,Object>> consultaMovimientos(String cuenta){
-    
-    return null;
+  public List<Map<String,?>> consultaMovimientos(String cuenta){
+    Connection cn = null;
+    List<Map<String,?>> lista = null;
+    try {
+      cn = AccesoDB.getConnection();
+      String sql = "select sucucodigo, sucunombre, cliecodigo, "
+              + "cliepaterno, cliematerno, clienombre, "
+              + "cuencodigo, cuensaldo, cuenestado, "
+              + "movinumero, movifecha, moviimporte, cuenreferencia, "
+              + "tipocodigo, tiponombre, tipoaccion, "
+              + "monecodigo, monenombre "
+              + "from v_movimiento "
+              + "where cuencodigo = ?";
+      PreparedStatement pstm = cn.prepareStatement(sql);
+      pstm.setString(1, cuenta);
+      ResultSet rs = pstm.executeQuery();
+      lista = JdbcUtil.rsToList(rs);
+      rs.close();
+      pstm.close();
+    } catch (Exception e) {
+      throw new RuntimeException(e.getMessage());
+    } finally {
+      try {
+        cn.close();
+      } catch (Exception e) {
+      }
+    }
+    return lista;
   }
   
   

@@ -1,7 +1,8 @@
 package pe.egcc.eureka.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.List;
+import java.util.Map;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,7 +19,8 @@ import pe.egcc.eureka.service.EurekaService;
  * @blog www.desarrollasoftware.com
  * @email egcc.usil@gmail.com
  */
-@WebServlet(name = "EurekaController", urlPatterns = {"/EurekaLogin"})
+@WebServlet(name = "EurekaController", 
+        urlPatterns = {"/EurekaLogin","/EurekaConsulta"})
 public class EurekaController extends HttpServlet {
 
   private EurekaService service;
@@ -48,8 +50,26 @@ public class EurekaController extends HttpServlet {
     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
   }
 
-  private void consulta(HttpServletRequest request, HttpServletResponse response) {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  private void consulta(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    try {
+      // Dato
+      String cuenta = request.getParameter("cuenta");
+      // Proceso
+      Map<String,Object> recCuenta = service.consultaCuenta(cuenta);
+      List<Map<String,?>> lista = service.consultaMovimientos(cuenta);
+      // Verificar
+      if(recCuenta == null){
+        throw new Exception("Cuenta no existe.");
+      }
+      // Salida
+      request.setAttribute("recCuenta", recCuenta);
+      request.setAttribute("lista", lista);
+    } catch (Exception e) {
+      request.setAttribute("error", e.getMessage());
+    }
+    // Forward
+    RequestDispatcher rd = request.getRequestDispatcher("consulta.jsp");
+    rd.forward(request, response);
   }
 
   private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
